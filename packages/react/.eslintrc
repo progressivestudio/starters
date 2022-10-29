@@ -1,0 +1,13 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:@progressivestudio/typescript",
+    "plugin:@progressivestudio/react",
+    "plugin:@progressivestudio/prettier"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off", // No need if you're using react version >= 17
+    "jsx-a11y/anchor-is-valid": "off", // Off due to the routers <Link /> component.
+    "@progressivestudio/jsx-no-hardcoded-content": "off" // No need for wording files for playground projects. Enable per need.
+  }
+}

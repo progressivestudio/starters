@@ -1,0 +1,22 @@
+# Editor stuff
+.idea
+.vscode
+.vim
+.fleet
+
+# Workspace
+.turbo
+.npmrc
+stats.html 
+
+# Web stuff
+node_modules
+dist
+dist-ssr
+build
+out
+
+# Misc
+.DS_Store
+*.local
+

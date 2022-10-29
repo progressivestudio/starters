@@ -1,0 +1,23 @@
+#
+#   Refer for explanation to following link:
+#   https://github.com/evilmartians/lefthook/blob/master/docs/full_guide.md
+#
+
+pre-push:
+  parallel: true
+  commands:
+    lint:
+      glob: "*.{js,ts,jsx,tsx,json}"
+      tags: "Lint package"
+      run: "pnpm run lint"
+    format:
+      glob: "*.{js,ts,jsx,tsx,json}"
+      tags: "Format packages"
+      run: "pnpm run format"
+
+commit-msg:
+  parallel: true
+  commands:
+    commit-lint:
+      tags: Commit message
+      run: pnpm commitlint -e
